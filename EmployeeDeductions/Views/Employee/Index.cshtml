@@ -1,0 +1,57 @@
+﻿@model IEnumerable<EmployeeDeductions.Models.EmployeeDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(x => x.employee_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.department_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.employee_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.paycheck_salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.paycheck_deductions)
+        </th>
+    </tr>
+    @foreach (var emp in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(x => emp.employee_name)
+    </td>
+    <td>
+        @Html.DisplayFor(x => emp.department_id)
+    </td>
+    <td>
+        @Html.DisplayFor(x => emp.employee_number)
+    </td>
+    <td>
+        @Html.DisplayFor(x => emp.paycheck_salary)
+    </td>
+    <td>
+        @Html.DisplayFor(x => emp.paycheck_deductions)
+    </td>
+    <td>
+        @Html.ActionLink("Detail", "Detail", new { id = emp.employee_number }) |
+        @Html.ActionLink("Delete", "Delete", new { id = emp.employee_number })
+    </td>
+</tr>
+
+    }
+</table>
+
