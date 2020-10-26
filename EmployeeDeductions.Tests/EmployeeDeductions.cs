@@ -89,6 +89,7 @@ namespace EmployeeDeductions.Tests
                     employee.employee_name = "test";
                     employee.dependent1_name = "BCD";
                     var test = Create(employee);
+                    //employee and one dependent together 700/20
                     var expectedDeduction = 35M;
                     Assert.AreEqual(test.paycheck_deductions, expectedDeduction);
                 }
