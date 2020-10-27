@@ -12,7 +12,7 @@ namespace EmployeeDeductions.Models
         public int? department_id { get; set; }
         public string dependent1_name { get; set; }
         public string dependent2_name { get; set; }
-        public string dependent3_name { get; set; }
+        public string dependent3_name { get; set; } 
         public string dependent4_name { get; set; }
         public string dependent5_name { get; set; }
         public decimal paycheck_salary { get; set; }
