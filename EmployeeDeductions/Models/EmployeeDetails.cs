@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace EmployeeDeductions.Models
 {
     public partial class EmployeeDetails
-    {
+    { 
         public int employee_number { get; set; }
         [Required(ErrorMessage = "Please give a valid employee Name.")]
         public string employee_name { get; set; }
